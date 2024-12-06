@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Quotes</title>
+    <link rel="stylesheet" href="favorites.css">
+</head>
+<body>
+ 
+    <button class="back-button" onclick="window.history.back();">Back</button>
+
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Topics</a></li>
+            <li><a href="#">Settings</a></li>    
+        </ul>
+    </div>
+
+    
+    <section class="add-favorite">
+        <header>
+            <h1>Add Your Favorite Quote</h1>
+            <p>Share your own quotes to inspire others!</p>
+        </header>
+
+        <form id="quote-form">
+            <textarea id="quote-text" placeholder="Enter your favorite quote" required></textarea>
+            <input type="text" id="quote-author" placeholder="Author Name" required>
+            <button type="submit">Add Quote</button>
+        </form>
+    </section>
+
+   
+    <section class="favorites-container">
+        <header class="favorites-header">
+            <h1>My Favorite Quotes</h1>
+            <p>Here are some of my most cherished quotes that inspire me every day.</p>
+        </header>
+
+        <div id="favorites-list" class="favorites-list">
+            <!-- Favorite Quotes will appear here -->
+        </div>
+    </section>
+
+    <script>
+       
+        const form = document.getElementById("quote-form");
+        const favoritesList = document.getElementById("favorites-list");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            const quoteText = document.getElementById("quote-text").value;
+            const quoteAuthor = document.getElementById("quote-author").value;
+
+            if (quoteText && quoteAuthor) {
+                const quoteCard = document.createElement("div");
+                quoteCard.classList.add("favorite-card");
+
+                quoteCard.innerHTML = `
+                    <blockquote>"${quoteText}"</blockquote>
+                    <p class="author">– ${quoteAuthor}</p>
+                `;
+                favoritesList.appendChild(quoteCard);
+
+                
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>

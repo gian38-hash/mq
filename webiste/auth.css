@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('skyblue.png'); 
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 100px;  
+    height: auto;
+}
+
+
+.auth-form {
+    text-align: center;
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00796b;
+}
+
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #009688;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .logo-image {
+        width: 80px;
+    }
+}

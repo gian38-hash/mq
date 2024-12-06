@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Based on Your Mood</title>
+    <link rel="stylesheet" href="mood.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Topics</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <section class="mood-container">
+        <header class="mood-header">
+            <h1>Based on Your Mood</h1>
+            <p>Select your mood and get the right vibe!</p>
+        </header>
+
+        <div class="mood-buttons">
+            <button class="mood-button happy" onclick="changeMood('happy')">Happy</button>
+            <button class="mood-button sad" onclick="changeMood('sad')">Sad</button>
+            <button class="mood-button angry" onclick="changeMood('angry')">Angry</button>
+            <button class="mood-button Anxious" onclick="changeMood('Anxious')">Anxious</button>
+        </div>
+    </section>
+
+    <button class="back-button" onclick="window.history.back();">Back</button>
+
+    <script>
+        function changeMood(mood) {
+            if (mood === 'happy') {
+                document.body.style.backgroundColor = '#ffc0cb';  
+                document.querySelector('.mood-header h1').textContent = "You're Happy!";
+                document.querySelector('.mood-header p').textContent = "Let the sunshine in!";
+            } else if (mood === 'sad') {
+                document.body.style.backgroundColor = '#808080';  
+                document.querySelector('.mood-header h1').textContent = "You're Sad!";
+                document.querySelector('.mood-header p').textContent = "It's okay to feel down.";
+            } else if (mood === 'angry') {
+                document.body.style.backgroundColor = '#c04e4e';  
+                document.querySelector('.mood-header h1').textContent = "You're Angry!";
+                document.querySelector('.mood-header p').textContent = "Let it all out!";
+            } else if (mood === 'Anxious') {
+                document.body.style.backgroundColor = '#000000';  
+                document.querySelector('.mood-header h1').textContent = "You're Anxious!";
+                document.querySelector('.mood-header p').textContent = "Don't Give Up!";
+            }
+        }
+    </script>
+</body>
+</html>

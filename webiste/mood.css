@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #171616;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #009688;
+    transform: scale(1.1);
+}
+
+.mood-container {
+    margin-top: 100px;
+}
+
+.mood-header {
+    margin-bottom: 30px;
+}
+
+.mood-header h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.mood-header p {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+.mood-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mood-button {
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.1em;
+}
+
+.mood-button:hover {
+    border: 2px solid #009688;
+    transform: scale(1.1);
+}
+
+.happy {
+    background-color: #ffc0cb;  
+}
+
+.sad {
+    background-color: #808080;  
+}
+
+.angry {
+    background-color: #c04e4e;  
+}
+
+.anxious {
+    background-color: #000000;  
+}
+
+.back-button {
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    border: 2px solid #009688;
+    transform: scale(1.1);
+}

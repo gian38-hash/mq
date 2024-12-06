@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Own Quotes</title>
+    <link rel="stylesheet" href="ownquotes.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Topics</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <section class="quotes-container">
+        <header class="quotes-header">
+            <h1>My Own Quotes</h1>
+            <p>Share your own inspirational or motivational quotes.</p>
+        </header>
+
+       
+        <form id="quote-form" class="quote-form">
+            <input type="text" id="quote-text" placeholder="Enter your quote" required>
+            <input type="text" id="quote-author" placeholder="Author's Name" required>
+            <button type="submit" class="add-quote-button">Add Quote</button>
+        </form>
+
+       
+        <div id="quote-list" class="quote-list"></div>
+    </section>
+
+    <button class="back-button" onclick="window.history.back();">Back</button>
+
+    <script>
+        
+        document.getElementById('quote-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            
+            const quoteText = document.getElementById('quote-text').value;
+            const quoteAuthor = document.getElementById('quote-author').value;
+
+            
+            const quoteCard = document.createElement('div');
+            quoteCard.classList.add('quote-card');
+
+            quoteCard.innerHTML = `
+                <blockquote>"${quoteText}"</blockquote>
+                <p class="author">- ${quoteAuthor}</p>
+            `;
+
+            
+            document.getElementById('quote-list').appendChild(quoteCard);
+
+            
+            document.getElementById('quote-text').value = '';
+            document.getElementById('quote-author').value = '';
+        });
+    </script>
+</body>
+</html>
